@@ -1,0 +1,62 @@
+/* http://colorschemedesigner.com/csd-3.5/#3C41Tw0w0--00 */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color:#666;
+    font-family: Arial;
+    font-size: 16px;
+    line-height:1.4;
+}
+
+a {
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+.default-l .default-l-header {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    padding:10px;
+    z-index:15;
+}
+
+.default-l .default-l-logo {
+    vertical-align:middle;
+    margin-right:10px;
+}
+
+.default-l .default-l-header-nav {
+    float:right;
+    margin-top:5px;
+}
+
+.default-l .default-l-header-nav li {
+    display:inline-block;
+    margin-right:10px;
+}
+
+.bg-blue {
+    background:#001732;
+    color:#fff;
+}
+
+.site-header a {
+    color:#fff;
+}
+
+.bg-blue a, .bg-blue a:active, .bg-blue a:focus {
+    color:#fff;
+}
+
+.section {
+    padding-bottom:10px;
+    padding-top:10px;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "turissini-technologies-llc",
+  "version": "1.0.0",
+  "description": "Homepage for Turissini Technologies",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node ./src/main",
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mustache": "^2.2.1",
+    "rotoscope": "^0.2.0",
+    "rx": "^4.0.8",
+    "rxpress": "^0.3.0"
+  }
+}
