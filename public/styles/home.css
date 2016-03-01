@@ -78,8 +78,12 @@
 
 
 .page-home .site-header {
-    background:rgba(0, 0, 0, 0.6);
+    background:rgba(0, 23, 50, 0.5);
     color: #fff;
+}
+
+.page-home .section-services {
+    background: #f8f8f8;
 }
 
 .page-home .section-services .row {

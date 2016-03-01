@@ -4,6 +4,7 @@
   "description": "Homepage for Turissini Technologies",
   "main": "src/main.js",
   "scripts": {
+    "build:client": "browserify ./src/home/client.js -o public/scripts/home.js -t [ babelify --presets [ es2015 react ] ]",
     "start": "node ./src/main",
     "test": "test"
   },
@@ -12,8 +13,17 @@
   "dependencies": {
     "express": "^4.13.4",
     "mustache": "^2.2.1",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
     "rotoscope": "^0.2.0",
     "rx": "^4.0.8",
     "rxpress": "^0.3.0"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0"
   }
 }

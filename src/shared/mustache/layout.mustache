@@ -12,7 +12,7 @@
     </head>
     <body class="{{bodyclass}}">
         <div class="default-l">
-            <header class="default-l-header site-header">
+            <header id="site-header" class="default-l-header site-header">
                 <a href="/">
                     <img class="default-l-logo" width="32" height="32" alt="Turissini Technologies, LLC" src="/images/logo.svg" /><span>Turissini Technologies</span>
                 </a>
@@ -25,6 +25,19 @@
                 </nav>
             </header>
             {{{body}}}
+            <footer class="default-l-footer site-footer bg-blue">
+                <section class="section section-social">
+                    <header class="section-header text-center">
+                        <h2 class="section-title">Social</h2>
+                        <hr />
+                    </header>
+                    <ul class="social-links text-center">
+                        <li class="social-link">Twitter</li>
+                        <li class="social-link">GitHub</li>
+                        <li class="social-link">LinkedIn</li>
+                    </ul>
+                </section>
+            </footer>
             {{{footer}}}
         </div>
     </body>

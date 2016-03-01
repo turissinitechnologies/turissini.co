@@ -43,6 +43,10 @@ a:hover {
     margin-right:10px;
 }
 
+.default-l .default-l-footer {
+    padding:10px;
+}
+
 .bg-blue {
     background:#001732;
     color:#fff;
@@ -59,4 +63,12 @@ a:hover {
 .section {
     padding-bottom:10px;
     padding-top:10px;
+}
+
+.social-links {
+    display:inline-block;
+}
+
+.social-links .social-link {
+    display: inline-block;
 }
