@@ -52,6 +52,23 @@ a:hover {
     color:#fff;
 }
 
+.btn-primary {
+    background:#ffc700;
+    border:0;
+    box-shadow:0;
+}
+
+.btn-primary:hover,
+.btn-primary:focus, .btn-primary:active {
+    background:#ffc700;
+}
+
+
+.btn-primary:focus:active {
+    background:#ff9c00;
+    outline:none;
+}
+
 .site-header a {
     color:#fff;
 }
@@ -66,9 +83,42 @@ a:hover {
 }
 
 .social-links {
-    display:inline-block;
+    margin-top:-15px;
 }
 
 .social-links .social-link {
     display: inline-block;
+    margin:0 10px;
+}
+
+.section .section-title {
+    font-weight:bold;
+    color:#333;
+    text-transform: uppercase;
+    font-size:1.6rem;
+}
+
+.section .section-title + hr {
+    border-top:0;
+    border-bottom:3px solid #ffc700;
+    width:50px;
+    margin:0 auto;
+    padding-top:20px;
+    margin-bottom:50px;
+}
+
+.bg-blue .section .section-title {
+    color: #fff;
+}
+
+.section-legal {
+    font-size:0.8em;
+    padding:0;
+    color:rgba(255, 255, 255, 0.2);
+    text-align:right;
+}
+
+.section-legal hr {
+    margin-bottom:10px;
+    border-color:rgba(255, 255, 255, 0.1);
 }

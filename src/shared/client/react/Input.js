@@ -1,16 +1,22 @@
 'use strict';
 
 import React from 'react';
+import _ from 'lodash';
 
 
-export default function ({ placeholder, value, onChange = function () {}, name, type = 'text' }) {
+export default function (props) {
 
-    function onInputChange (evt) {
-        onChange(name, evt.target.value, evt);
+    const clone = _.clone(props);
+    const originalOnChange = clone.onChange;
+
+    clone.onChange = function onInputChange (evt) {
+        if (typeof originalOnChange === 'function') {
+            originalOnChange(props.name, evt.target.value, evt);
+        }
     }
 
     return (
-        <input placeholder={placeholder} value={value} type={type} onChange={onInputChange} />
+        <input {...clone} />
     )
 
 }

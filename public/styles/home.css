@@ -21,6 +21,68 @@
     opacity:0.85;
 }
 
+.form-contact {
+    margin:0 auto;
+    max-width:400px;
+    text-align:left;
+}
+
+.form-contact label {
+    color:#b1b1b1;
+    font-weight:normal;
+    margin-bottom:0;
+    padding-right:5px;
+    flex-shrink:1;
+}
+
+.form-contact select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    background: transparent;
+    border:0;
+    width:100%;
+    text-align:left;
+    direction:rtl;
+}
+
+.form-contact select option {
+    direction:ltr;
+}
+
+.form-contact select:focus {
+    outline:0;
+}
+
+.form-contact input {
+    border-radius:3px;
+    border:0;
+    width:100%;
+    text-align:right;
+}
+
+.form-contact .input-container {
+    display:flex;
+    padding-bottom:5px;
+    margin-bottom:20px;.
+}
+
+.form-contact .input-container .input {
+    flex-grow:1;
+    border-bottom:1px solid #e1e1e1;
+    text-align:right;
+}
+
+.form-contact input[type=submit] {
+    border:0;
+    text-align:center;
+}
+
+
+
+.form-contact input:focus {
+    outline:none;
+}
+
 @media screen and (min-width:1118px) {
     .page-home .hero .hero-background img {
         width:100%;
@@ -48,22 +110,6 @@
     border-top:0;
     border-bottom:10px solid #ffc700;
     width:100px;
-    margin:0 auto;
-    padding-top:20px;
-    margin-bottom:50px;
-}
-
-.page-home .section .section-title {
-    font-weight:bold;
-    color:#333;
-    text-transform: uppercase;
-    font-size:1.6rem;
-}
-
-.page-home .section .section-title + hr {
-    border-top:0;
-    border-bottom:3px solid #ffc700;
-    width:50px;
     margin:0 auto;
     padding-top:20px;
     margin-bottom:50px;
