@@ -35030,6 +35030,8 @@ function onSubmit(e) {
                 },
                 method: 'post',
                 body: JSON.stringify(contactJSON)
+            }).then(function () {
+                renderSuccess();
             });
         })();
     }
@@ -35044,6 +35046,14 @@ function onContactChange(prop, val, evt) {
 
     contact.set(prop, obj);
     renderForm(contact);
+}
+
+function renderSuccess() {
+    _reactDom2.default.render(_react2.default.createElement(
+        'div',
+        null,
+        'Thanks! We will be in contact with you shortly.'
+    ), formContainer);
 }
 
 function renderForm(c) {

@@ -82,6 +82,9 @@ function onSubmit (e) {
             },
             method: 'post',
             body: JSON.stringify(contactJSON)
+        })
+        .then(() => {
+            renderSuccess();
         });
     }
 }
@@ -95,6 +98,12 @@ function onContactChange (prop, val, evt) {
 
     contact.set(prop, obj);
     renderForm(contact);
+}
+
+function renderSuccess () {
+    ReactDom.render((
+        <div>Thanks! We will be in contact with you shortly.</div>
+    ), formContainer);
 }
 
 function renderForm (c) {
