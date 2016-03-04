@@ -66,6 +66,14 @@
     margin-bottom:20px;.
 }
 
+.form-contact .input-container.text-danger label {
+    color:#a94442;
+}
+
+.form-contact .input-container.text-danger .input {
+    border-color:#a94442;
+}
+
 .form-contact .input-container .input {
     flex-grow:1;
     border-bottom:1px solid #e1e1e1;
@@ -83,13 +91,6 @@
     outline:none;
 }
 
-@media screen and (min-width:1118px) {
-    .page-home .hero .hero-background img {
-        width:100%;
-        height:auto;
-    }
-}
-
 .page-home .hero .section-content {
     color:rgba(255, 255, 255, 0.95);
     position:absolute;
@@ -101,9 +102,9 @@
 }
 
 .page-home .hero .section-title {
+    font-size:4.5rem;
     text-transform: uppercase;
     font-weight:bold;
-    font-size:5rem;
 }
 
 .page-home .hero .section-title + hr {
@@ -118,15 +119,11 @@
 .page-home .hero .section-subtitle {
     color:#e1e1e1;
     padding:0 30px;
-    margin:0 auto;
+    margin:0 auto 80px;
     max-width:700px;
+    line-height:1.3;
 }
 
-
-.page-home .site-header {
-    background:rgba(0, 23, 50, 0.5);
-    color: #fff;
-}
 
 .page-home .section-services {
     background: #f8f8f8;
@@ -134,4 +131,29 @@
 
 .page-home .section-services .row {
     margin-bottom:20px;
+}
+
+.page-home .section-about hr {
+    margin-bottom:40px;
+}
+
+@media screen and (min-width:1118px) {
+    .page-home .hero .hero-background img {
+        width:100%;
+        height:auto;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .page-home .hero .hero-background {
+        left:-310px;
+    }
+
+    .page-home .hero .section-title {
+        font-size:4rem;
+    }
+
+    .page-home .hero .section-subtitle {
+        font-size:2rem;
+    }
 }

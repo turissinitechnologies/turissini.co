@@ -24,7 +24,6 @@ a:hover {
     top:0;
     left:0;
     right:0;
-    padding:10px;
     z-index:15;
 }
 
@@ -45,6 +44,13 @@ a:hover {
 
 .default-l .default-l-footer {
     padding:10px;
+}
+
+.navbar-default {
+    border:0;
+    border-radius:0;
+    background:rgba(0, 23, 50, 0.5);
+    color: #fff;
 }
 
 .bg-blue {
@@ -69,8 +75,28 @@ a:hover {
     outline:none;
 }
 
-.site-header a {
+.navbar-default .navbar-brand {
+    height:auto;
+    padding:10px;
     color:#fff;
+}
+
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover {
+    color:#ffc700;
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+    color:#ffc700;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color:#fff;
+}
+
+.navbar-default .navbar-brand > img {
+    display:inline-block;
 }
 
 .bg-blue a, .bg-blue a:active, .bg-blue a:focus {
@@ -78,8 +104,7 @@ a:hover {
 }
 
 .section {
-    padding-bottom:10px;
-    padding-top:10px;
+    padding:50px 0;
 }
 
 .social-links {

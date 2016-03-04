@@ -12,16 +12,27 @@
     </head>
     <body class="{{bodyclass}}">
         <div class="default-l">
-            <header id="site-header" class="default-l-header site-header">
-                <a href="/">
-                    <img class="default-l-logo" width="32" height="32" alt="Turissini Technologies, LLC" src="/images/logo.svg" /><span>Turissini Technologies</span>
-                </a>
-                <nav class="default-l-header-nav nav nav-horiz">
-                    <ul>
-                        <li class="nav-item"><a href="#about">About</a></li>
-                        <li class="nav-item"><a href="#services">Services</a></li>
-                        <li class="nav-item"><a href="#contact">Contact</a></li>
-                    </ul>
+            <header class="default-l-header site-header">
+                <nav id="site-header" class="navbar navbar-default navbar-brand-nav">
+                    <div class="navbar-header">
+                        <button id="site-navbar-button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand site-title" href="/">
+                            <img class="default-l-logo" width="32" height="32" alt="Turissini Technologies, LLC" src="/images/logo.svg" />
+                            <span>Turissini Technologies</span>
+                        </a>
+                    </div>
+                    <div id="site-navbar-collapse" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
                 </nav>
             </header>
             {{{body}}}

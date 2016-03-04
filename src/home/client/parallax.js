@@ -9,6 +9,7 @@ const hero = document.getElementById('hero');
 function parallax() {
     const scrollHeight = document.body.offsetHeight - window.innerHeight;
     const heroHeight = hero.offsetHeight;
+    const headerHeight = siteHeader.offsetHeight;
 
     return createRotoscope(window).bounds({
         start: 0,
@@ -28,7 +29,7 @@ function parallax() {
 
         return timeline.appendChild(animateSiteHeaderBackground, {
             offset: heroHeight / 2,
-            duration: heroHeight / 2
+            duration: (heroHeight / 2) - headerHeight
         });
 
 
