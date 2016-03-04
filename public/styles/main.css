@@ -109,6 +109,8 @@ a:hover {
 }
 
 .social-links {
+    margin-left:0;
+    padding-left:0;
     margin-top:-15px;
 }
 
