@@ -157,3 +157,9 @@
         font-size:2rem;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .navbar-collapse {
+        background:rgba(0, 23, 50, 0.2);
+    }
+}

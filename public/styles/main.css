@@ -53,6 +53,10 @@ a:hover {
     color: #fff;
 }
 
+.navbar-collapse {
+    border:0;
+}
+
 .bg-blue {
     background:#001732;
     color:#fff;

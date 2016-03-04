@@ -142,7 +142,7 @@ function renderForm (c) {
             <div className="input-container">
                 <label htmlFor="contact-input-company">I need a</label>
                 <div className="input">
-                    <Select value={c.get('need')} name="need" onChange={onContactChange}>
+                    <Select value={c.get('need').value} name="need" onChange={onContactChange}>
                         <option value="web site">Web site</option>
                         <option value="web app">Web App</option>
                         <option value="ios app">iOS App</option>
