@@ -57,6 +57,14 @@ a:hover {
     border:0;
 }
 
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background:#fff;
+}
+
+.navbar-open .navbar-header, .navbar-open .navbar-collapse {
+    background: rgba(0, 23, 50, 1);
+}
+
 .bg-blue {
     background:#001732;
     color:#fff;
@@ -91,7 +99,8 @@ a:hover {
 }
 
 .navbar-default .navbar-nav>li>a:focus,
-.navbar-default .navbar-nav>li>a:hover {
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a.highlight {
     color:#ffc700;
 }
 

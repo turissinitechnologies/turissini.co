@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "classnames": "^2.2.3",
+    "delegate-events": "^1.1.1",
     "express": "^4.13.4",
     "forever": "^0.15.1",
     "jquery": "^2.2.1",
