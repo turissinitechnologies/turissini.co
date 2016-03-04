@@ -63,5 +63,6 @@ rxpress.create()
     })
 
     .subscribe((rxpressApp) => {
-        rxpressApp.listen(3000);
+        rxpressApp.listen(8000);
+        console.log('Listening on port 8000');
     });

@@ -5,7 +5,7 @@
   "main": "src/main.js",
   "scripts": {
     "build:client": "browserify ./src/home/client.js -o public/scripts/home.js -t [ babelify --presets [ es2015 react ] ]",
-    "start": "node ./src/main",
+    "start": "forever start --spinSleepTime 10000 src/main.js",
     "test": "test"
   },
   "author": "",
@@ -13,6 +13,7 @@
   "dependencies": {
     "classnames": "^2.2.3",
     "express": "^4.13.4",
+    "forever": "^0.15.1",
     "lodash": "^4.5.1",
     "mustache": "^2.2.1",
     "numeral": "^1.5.3",
