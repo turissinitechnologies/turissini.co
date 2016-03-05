@@ -14,7 +14,7 @@ const navbarButton = document.getElementById('site-navbar-button');
 initMobileNavbar(navbarButton, siteNavBarCollapse, siteHeader);
 const scrollToSpring = createScrollToSpring();
 
-delegateEvents.bind(siteHeader, '.navbar-nav a', 'click', function (e) {
+delegateEvents.bind(document, '.link-spring', 'click', function (e) {
     const target = e.target;
     const href = target.getAttribute('href');
     const el = document.querySelector(href);

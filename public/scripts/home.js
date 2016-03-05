@@ -35085,7 +35085,7 @@ var navbarButton = document.getElementById('site-navbar-button');
 (0, _mobileNavbar2.default)(navbarButton, siteNavBarCollapse, siteHeader);
 var scrollToSpring = (0, _scrollToSpring2.default)();
 
-_delegateEvents2.default.bind(siteHeader, '.navbar-nav a', 'click', function (e) {
+_delegateEvents2.default.bind(document, '.link-spring', 'click', function (e) {
     var target = e.target;
     var href = target.getAttribute('href');
     var el = document.querySelector(href);
