@@ -107,6 +107,8 @@
     text-transform: uppercase;
     font-weight:bold;
     margin-top:2em;
+    padding-left:40px;
+    padding-right:40px;
 }
 
 .page-home .hero .section-title + hr {
@@ -121,7 +123,7 @@
     color:#e1e1e1;
     font-size:2em;
     padding:0 30px;
-    margin:2em auto 5em;
+    margin:2em auto 40px;
     max-width:550px;
     line-height:1.3;
 }
