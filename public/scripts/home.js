@@ -35064,56 +35064,37 @@ require('./client/parallax');
 
 require('./client/contactForm');
 
-var _mspring = require('./client/lib/mspring');
-
-var _mspring2 = _interopRequireDefault(_mspring);
-
 var _delegateEvents = require('delegate-events');
 
 var _delegateEvents2 = _interopRequireDefault(_delegateEvents);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _scrollToSpring = require('./client/scrollToSpring');
 
-function toggleClassName(el, className) {
-    if (el.classList.contains(className)) {
-        el.classList.remove(className);
-    } else {
-        el.classList.add(className);
-    }
-}
+var _scrollToSpring2 = _interopRequireDefault(_scrollToSpring);
+
+var _mobileNavbar = require('./client/mobileNavbar');
+
+var _mobileNavbar2 = _interopRequireDefault(_mobileNavbar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var siteHeader = document.getElementById('site-header');
 var siteNavBarCollapse = document.getElementById('site-navbar-collapse');
 var navbarButton = document.getElementById('site-navbar-button');
-navbarButton.addEventListener('click', function () {
-    toggleClassName(siteNavBarCollapse, 'in');
-    toggleClassName(navbarButton, 'active');
-    toggleClassName(siteHeader, 'navbar-open');
-});
 
-var demoSpring = new _mspring2.default({
-    onSpringStart: function onSpringStart() {},
-    onSpringChange: function onSpringChange(massPos, springData) {
-        window.requestAnimationFrame(function () {
-            window.scrollTo(0, massPos);
-        });
-    },
-    onSpringRest: function onSpringRest() {}
-});
-
-demoSpring.setSpringParameters(5, 1, 0.6);
+(0, _mobileNavbar2.default)(navbarButton, siteNavBarCollapse, siteHeader);
+var scrollToSpring = (0, _scrollToSpring2.default)();
 
 _delegateEvents2.default.bind(siteHeader, '.navbar-nav a', 'click', function (e) {
-    e.preventDefault();
     var target = e.target;
     var href = target.getAttribute('href');
     var el = document.querySelector(href);
     var offsetTop = el.offsetTop;
 
-    demoSpring.start(undefined, window.scrollY, undefined, offsetTop);
+    scrollToSpring.start(undefined, window.scrollY, undefined, offsetTop);
 });
 
-},{"./client/contactForm":170,"./client/lib/mspring":171,"./client/parallax":172,"delegate-events":3}],170:[function(require,module,exports){
+},{"./client/contactForm":170,"./client/mobileNavbar":172,"./client/parallax":173,"./client/scrollToSpring":174,"delegate-events":3}],170:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -35430,7 +35411,7 @@ function renderForm(c) {
 
 renderForm(contact);
 
-},{"./../../shared/client/react/Form":173,"./../../shared/client/react/Input":174,"./../../shared/client/react/Select":175,"classnames":2,"numeral":8,"react":165,"react-dom":9}],171:[function(require,module,exports){
+},{"./../../shared/client/react/Form":175,"./../../shared/client/react/Input":176,"./../../shared/client/react/Select":177,"classnames":2,"numeral":8,"react":165,"react-dom":9}],171:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35587,6 +35568,30 @@ mSpring.prototype.setOnSpringRest = function (onSpringRest) {
 },{}],172:[function(require,module,exports){
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function (navbarButton, siteNavBarCollapse, siteHeader) {
+
+    navbarButton.addEventListener('click', function () {
+        toggleClassName(siteNavBarCollapse, 'in');
+        toggleClassName(navbarButton, 'active');
+        toggleClassName(siteHeader, 'navbar-open');
+    });
+};
+
+function toggleClassName(el, className) {
+    if (el.classList.contains(className)) {
+        el.classList.remove(className);
+    } else {
+        el.classList.add(className);
+    }
+}
+
+},{}],173:[function(require,module,exports){
+'use strict';
+
 var _rotoscope = require('rotoscope');
 
 var siteHeader = document.getElementById('site-header');
@@ -35666,7 +35671,40 @@ function startParallax() {
 window.addEventListener('resize', startParallax);
 startParallax();
 
-},{"rotoscope":168}],173:[function(require,module,exports){
+},{"rotoscope":168}],174:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function () {
+    var stiffness = arguments.length <= 0 || arguments[0] === undefined ? 5 : arguments[0];
+    var mass = arguments.length <= 1 || arguments[1] === undefined ? 1 : arguments[1];
+    var friction = arguments.length <= 2 || arguments[2] === undefined ? 0.6 : arguments[2];
+
+    var scrollSpring = new _mspring2.default({
+        onSpringStart: function onSpringStart() {},
+        onSpringChange: function onSpringChange(massPos, springData) {
+            window.requestAnimationFrame(function () {
+                window.scrollTo(0, massPos);
+            });
+        },
+        onSpringRest: function onSpringRest() {}
+    });
+
+    scrollSpring.setSpringParameters(stiffness, mass, friction);
+
+    return scrollSpring;
+};
+
+var _mspring = require('./lib/mspring');
+
+var _mspring2 = _interopRequireDefault(_mspring);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+},{"./lib/mspring":171}],175:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35728,7 +35766,7 @@ Form.defaultProps = {
 
 exports.default = Form;
 
-},{"react":165}],174:[function(require,module,exports){
+},{"react":165}],176:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35759,7 +35797,7 @@ var _lodash2 = _interopRequireDefault(_lodash);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-},{"lodash":7,"react":165}],175:[function(require,module,exports){
+},{"lodash":7,"react":165}],177:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
