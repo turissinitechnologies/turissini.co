@@ -28,33 +28,16 @@
 
         </script>
         {{{head}}}
+        {{#styles}}
+            <link rel="stylesheet" type="text/css" href="{{{.}}}" />
+        {{/styles}}
     </head>
     <body class="{{bodyclass}}">
         <div class="default-l">
-            <header class="default-l-header site-header">
-                <nav id="site-header" class="navbar navbar-default navbar-brand-nav">
-                    <div class="navbar-header">
-                        <button id="site-navbar-button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand site-title" href="/">
-                            <img class="default-l-logo" width="32" height="32" alt="Turissini Technologies, LLC" src="/images/logo.svg" />
-                            <span>Turissini Technologies</span>
-                        </a>
-                    </div>
-                    <div id="site-navbar-collapse" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a class="link-spring" id="nav-link-about" href="#about">About</a></li>
-                            <li><a class="link-spring" href="#services">Services</a></li>
-                            <li><a class="link-spring" href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-            {{{body}}}
+            {{{header}}}
+            <main class="main">
+                {{{body}}}
+            </main>
             <footer class="default-l-footer site-footer bg-blue">
                 <section class="section section-social">
                     <header class="section-header text-center">
@@ -74,5 +57,8 @@
             </footer>
             {{{footer}}}
         </div>
+        {{#scripts}}
+            <script src="{{{.}}}"></script>
+        {{/scripts}}
     </body>
 </html>
