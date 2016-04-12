@@ -161,7 +161,7 @@ const app = {
 
 app.addRoutePackage('/', 'get', 'turissinico-home');
 app.addPackage('turissinico-header', 'header');
-app.addRoutePackage('/playground/springs', 'get', 'turissinico-springplayground');
+app.addRoutePackage('/javascript-playground/spring-physics-animation', 'get', 'turissinico-springplayground');
 
 
 rxpress.create()
